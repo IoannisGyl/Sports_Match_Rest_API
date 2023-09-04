@@ -8,17 +8,17 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/*
+    Performing actions on the Match Model
+*/
 
 @Service
 @Component
 public class MatchService {
 
+    @Autowired
     private MatchRepository matchRepository;
 
-    @Autowired
-    public MatchService(MatchRepository matchRepository) {
-        this.matchRepository = matchRepository;
-    }
 
     // Create a new match
     public Match createMatch(Match match) {

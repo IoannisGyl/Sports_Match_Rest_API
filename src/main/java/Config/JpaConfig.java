@@ -7,6 +7,9 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 import javax.sql.DataSource;
 
+/*
+    Manually configuring the Datasource
+*/
 @Configuration
 public class JpaConfig {
 
@@ -14,7 +17,7 @@ public class JpaConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan("Models"); // Package(s) where your JPA entities are located
+        em.setPackagesToScan("Repositories"); // Package(s) where your JPA entities are located
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

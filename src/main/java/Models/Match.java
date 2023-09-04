@@ -7,6 +7,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
+/*
+    Match model definition
+*/
 @Entity
 public class Match {
     @Id
@@ -19,6 +22,18 @@ public class Match {
     private String match_time;
     @Size(max = 50)
     private String team_a;
+    @Size(max = 50)
+    private String team_b;
+    private enum Sport{
+        FOOTBALL(1),
+        BASKETBALL(2);
+
+        public final int value;
+
+        private Sport(int value){
+            this.value = value;
+        }
+    }
 
     public String getDescription() {
         return description;
@@ -58,19 +73,6 @@ public class Match {
 
     public void setTeam_b(String team_b) {
         this.team_b = team_b;
-    }
-
-    @Size(max = 50)
-    private String team_b;
-    private enum Sport{
-        FOOTBALL(1),
-        BASKETBALL(2);
-
-        public final int value;
-
-        private Sport(int value){
-            this.value = value;
-        }
     }
 }
 

@@ -7,6 +7,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
+/*
+    Match Odds model definition
+*/
 @Entity
 public class MatchOdds {
     @Id

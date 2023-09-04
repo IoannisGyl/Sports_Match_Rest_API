@@ -11,6 +11,9 @@ import org.springframework.stereotype.Repository;
 import java.util.Date;
 import java.util.List;
 
+/*
+    Match Odds repository with a custom find method
+*/
 @Repository
 public interface MatchOddsRepository extends JpaRepository<MatchOdds, Long>, CrudRepository<MatchOdds,Long> {
     List<Match> findBymatch_id(int matchId);

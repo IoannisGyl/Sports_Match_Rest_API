@@ -7,16 +7,15 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/*
+    Performing actions on the Match Odds Model
+*/
 
 @Service
 @Component
 public class MatchOddsService {
-    private MatchOddsRepository matchOddsRepository;
-
     @Autowired
-    public MatchOddsService(MatchOddsRepository matchOddsRepository) {
-        this.matchOddsRepository = matchOddsRepository;
-    }
+    private MatchOddsRepository matchOddsRepository;
 
     // Create a new matchOdds
     public MatchOdds createMatchOdds(MatchOdds matchOdds) {

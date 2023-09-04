@@ -1,5 +1,9 @@
 package Security;
 
+/*
+    Config for Basic Auth. in case we wanted to put the endpoints behind a login (Optional)
+*/
+
 //@Configuration
 //@EnableWebSecurity
 //public class BasicAuthConfig extends WebSecurityConfigurerAdapter {
